@@ -50,6 +50,10 @@ $(".button").on("click" , function(){
           var gif = $("<img>");
 
           gif.attr("src" , results[i].images.fixed_height.url);
+          gif.attr("data-state" , "animate");
+          gif.attr("data-still" , results[i].images.fixed_height_still.url), 
+          gif.attr("data-animate" , results[i].images.fixed_height.url)
+          gif.addClass("gif");
 
           gifDiv.append(gif);
 
@@ -59,6 +63,19 @@ $(".button").on("click" , function(){
   })
 
 }
+
+$(".gif").on("click", function() {
+
+      var state = $(this).attr("data-state");
+
+      if (state === "animate") {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+      } else {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+      }
+    });
 
 // })
 
