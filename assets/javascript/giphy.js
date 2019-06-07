@@ -19,7 +19,7 @@ $(".button").on("click" , function(){
   $("#breakfast-gifs-here").empty();
 
     var breakfast = $(this).attr("data-name");
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + breakfast + "&api_key=MWcpJfnOXM8K47gFSCBq3kOPopsVa2Cp&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + breakfast + "&api_key=MWcpJfnOXM8K47gFSCBq3kOPopsVa2Cp&limit=10";
 
       $.ajax({
         url: queryURL,
