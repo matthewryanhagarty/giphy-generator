@@ -88,7 +88,10 @@ $("#giferate").on("click" , function(){
   
   topics.push(giferate);
 
+  $("#breakfast-input").val('');
+
   renderButtons();
+  
   }
 });
 
