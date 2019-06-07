@@ -1,18 +1,3 @@
-//buttons already on the page when the page loaded  ----x
-        //JS is populating the buttons in the top ----x
-//when you click on the button:
-      //10 images are displayed from the giphy API of the topic
-      // these images are responsive in terms of clicking on them to start and stop
-      // each button is part of an array
-              // the array is looping through and generating a button for each one
-              //the button's have to have or name or whatever that is linked to the giphy API
-              // on click 
-
-//there will an input that will have to store the users answers as a value
-        //this will then have to be created into a button that also acceses the giphy api
-
-// $(document).ready(function(){
-
 
 var topics = ["eggs benedict" , "bacon" , "pancakes with syrup" , "coffee" , "sausage mcmuffin" , "hashbrown"];
 
@@ -94,28 +79,18 @@ $("#giferate").on("click" , function(){
 
   event.preventDefault();
 
-  var giferate = $("#breakfast-input").val().trim();
+  giferate = $("#breakfast-input").val().trim();
 
+  if (giferate == "") {
+    alert('Please enter a breakfast item');
+    return false;
+    } else {
+  
   topics.push(giferate);
 
   renderButtons();
+  }
 });
 
 renderButtons();
 
-$('.carousel').carousel({
-  setInterval: 1000
-})
-
-
-// $(".gif").on("click", function() {
-
-//   var state = $(this).attr("data-state");
-
-//   if (state === "still") {
-//     $(this).attr("src", $(this).attr("data-animate"));
-//     $(this).attr("data-state", "animate");
-//   } else {
-//     $(this).attr("src", $(this).attr("data-still"));
-//     $(this).attr("data-state", "still");
-//   }
