@@ -5,11 +5,50 @@
   <meta charset="utf-8">
   <title>Gipherate Your Breakfast</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
   <!-- bootstrap css link above and bootstrap javascript below -->
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <html>
 <body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/eggs-benedict.jpg" class="d-block w-100" alt="eggs benny and the jets">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h1>A Breakfast 'Array'</h1>
+                        <h3>Eggs Benny & the Jets</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/biscuits.jpg" class="d-block w-100" alt="biscuits and gravy">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h1>A Breakfast 'Array'</h1>
+                        <h3>Biscuits & NOM Sauce</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/sausage.jpg" class="d-block w-100" alt="sausage mcmuffin">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h1>A Breakfast 'Array'</h1>
+                        <h3>A Depiction of my Childhood</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
 <div class="container">
     <div class="row">
         <div class="col-sm-12" id="button-holder">
@@ -20,13 +59,14 @@
     <form id="movie-form">
     <div class="row">
         <div class="col-sm-12">
+            <p>ENTER YOUR FAVORITE BREAKFAST ITEM BELOW TO 'GIPHERATE' IT</p>
             <input type="text" id="breakfast-input">
         </div>
     </div>
     <br>
     <div class="row">
         <div class="col-sm-12">
-        <input type="submit" id="giferate" value="G . I . P . E . R . A . T . E ">
+        <input type="submit" id="giferate" value="G . I . P . E . H . R . A . T . E ">
         </div>
     </div>
     </form>

@@ -13,6 +13,7 @@
 
 // $(document).ready(function(){
 
+
 var topics = ["eggs benedict" , "bacon" , "pancakes with syrup" , "coffee" , "sausage mcmuffin" , "hashbrown"];
 
 function renderButtons() {
@@ -46,25 +47,35 @@ $(".button").on("click" , function(){
 
         for (i = 0; i < results.length; i++) {
 
+          if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
+
+          var rating = results[i].rating;
+
+          var p = $("<p>").text("Rating: " + rating.toUpperCase());
+          p.addClass("gif-p")
+
           var gifDiv = $("<div>")
+          gifDiv.addClass("gif-div");
           var gif = $("<img>");
 
-          gif.attr("src" , results[i].images.fixed_height.url);
-          gif.attr("data-state" , "animate");
+          gif.attr("src" , results[i].images.fixed_height_still.url);
+          gif.attr("data-state" , "still");
           gif.attr("data-still" , results[i].images.fixed_height_still.url), 
           gif.attr("data-animate" , results[i].images.fixed_height.url)
           gif.addClass("gif");
-
+          
+          gifDiv.append(p);
           gifDiv.append(gif);
 
           $("#breakfast-gifs-here").prepend(gifDiv);
+        }
       }
     })
   })
 
 }
-
-$(".gif").on("click", function() {
+// use dcoument when you dyncamically generate elements
+$(document).on("click", ".gif", function() {
 
       var state = $(this).attr("data-state");
 
@@ -91,6 +102,10 @@ $("#giferate").on("click" , function(){
 });
 
 renderButtons();
+
+$('.carousel').carousel({
+  setInterval: 1000
+})
 
 
 // $(".gif").on("click", function() {

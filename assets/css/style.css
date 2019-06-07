@@ -1,15 +1,52 @@
-#main-row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
+.button {
+  margin-right: 5px;
+}
+
+#breakfast-gifs-here {
+  background-image: url(../images/plate.png);
+  background-size: 100%;
+  margin: 0 auto;
+}
+  .container {
+    margin: 0 auto;
   }
+
+  .gif-div {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    float: left;
+  }
+
+  .gif-p {
+    font-family: 'Merriweather', serif;
+    background: white;
+    border-style: solid;
+    border-width: .5px;
+    text-align: center
+  }
+
+  body {
+    margin: 0 auto;
+  }
+
+ #carouselExampleSlidesOnly{
+    font-family: 'Merriweather', serif;
+    height: 200px;
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+
+  .row {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .col-md-12 {
+    margin: 0 auto;
+    font-family: 'Merriweather', serif;
+  }
+
   
-  #breakfast-gifs-here {
-    flex: 50%;
-    padding: 0 4px;
-  }
-  
-  #breakfast-gifs-here img {
-    margin-top: 8px;
-    vertical-align: middle;
-  }
